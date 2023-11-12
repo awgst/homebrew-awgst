@@ -8,7 +8,7 @@ class Aiterm < Formula
   version "0.4.0"
 
   on_macos do
-    url "https://github.com/awgst/aiterm/releases/download/v0.4.0/aiterm_0.4.0_darwin_all.tar.gz"
+    url "https://raw.githubusercontent.com/awgst/aiterm-releases/main/aiterm_0.4.0_darwin_all.tar.gz"
     sha256 "441482f234f3eaef03acdf508aacf8facadcf4d1b7e2ffcbbddc53a2be7f30ef"
 
     def install
