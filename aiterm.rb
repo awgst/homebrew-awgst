@@ -5,11 +5,11 @@
 class Aiterm < Formula
   desc ""
   homepage "https://aiterm.net"
-  version "0.5.0"
+  version "0.6.2"
 
   on_macos do
-    url "https://raw.githubusercontent.com/awgst/aiterm-releases/main/aiterm_0.5.0_darwin_all.tar.gz"
-    sha256 "0415ba32299bab92eb20f285051bd6b357e5ade507fbf530a4d7640c1f374c04"
+    url "https://github.com/awgst/aiterm/releases/download/v0.6.2/aiterm_0.6.2_darwin_all.tar.gz"
+    sha256 "05393ebf6291b1a997cee9adc4e59f31b088c9c89ab3c89bcd1b24facefcbd68"
 
     def install
       bin.install "aiterm"
@@ -17,17 +17,17 @@ class Aiterm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://raw.githubusercontent.com/awgst/aiterm-releases/main/aiterm_0.5.0_linux_amd64.tar.gz"
-      sha256 "e03e67326bf4802b7a3d027e4af44b10a3e3863deb3f08b2e87a882ae83b076a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/awgst/aiterm/releases/download/v0.6.2/aiterm_0.6.2_linux_arm64.tar.gz"
+      sha256 "3df6b817a51c4092d82d1eba2d64b55772a31cd12f4f5dc39b4ac5ba7f369310"
 
       def install
         bin.install "aiterm"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://raw.githubusercontent.com/awgst/aiterm-releases/main/aiterm_0.5.0_linux_arm64.tar.gz"
-      sha256 "e16d869818bd9b0c8a81af512ac5d076d8f803e91e0205bb5a17aa157882d6bf"
+    if Hardware::CPU.intel?
+      url "https://github.com/awgst/aiterm/releases/download/v0.6.2/aiterm_0.6.2_linux_amd64.tar.gz"
+      sha256 "b01631b1e30e2b1a134ed5a2da76468ced99f2f215192ca6b7ecd8695b3a9be3"
 
       def install
         bin.install "aiterm"
