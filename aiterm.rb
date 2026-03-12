@@ -5,7 +5,7 @@
 class Aiterm < Formula
   desc ""
   homepage "https://aiterm.net"
-  version "1.3.0"
+  version "1.4.1"
 
   on_macos do
     url "https://raw.githubusercontent.com/awgst/aiterm-releases/main/aiterm_1.4.1_darwin_all.tar.gz"
